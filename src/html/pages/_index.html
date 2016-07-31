@@ -1,0 +1,201 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <object type="image/svg+xml" data="img/dep-graph.svg" id="dep-graph">
+        Your browser does not support SVG
+      </object>
+    </div>
+  </div>
+
+  <div class="col-xs-12" id="info">
+    <h1>
+      Graph of the Top 50 Most Depended-on Lua Libraries<br>
+      <small>and its dependencies</small>
+    </h1>
+    <p><strong>Nodes and Edges (Ovals and Arrows):</strong></p>
+    <p>Nodes represent a package and a directed edge (arrow) points to the
+       package on which it depends. Green and light yellow nodes are
+       packages belonging to the &quot;Top 50&quot; list, bright yellow
+       nodes are packages not in the &quot;Top 50&quot; but are
+       dependencies of packages in the &quot;Top 50&quot;.
+    </p>
+    <p>Initially, I collected 1122 packages (in July 2016) which is
+      just too big to visualize efficiently (but not impossible, I could
+      safely generate a graph of Top 500 nodes but displaying it becomes
+      a problem). To wrap your head around the figures: the table below
+      shows the number of dependents which is number of arrows pointing to
+      that particular node. The &quot;Top 50&quot; is much more feasible
+      to display and shows enough information dependency strategies when
+      developing packages for Lua. The values below are based on the
+      listed dependencies on
+      <a href="http://www.luarocks.org">luarocks.org</a>.
+    </p>
+    <p><strong>Top Dependencies (in desc. order):</strong></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Package Name</th>
+          <th># Dependents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LuaSocket</td><td>95</td>
+        </tr>
+        <tr>
+          <td>LuaFileSystem</td><td>55</td>
+        </tr>
+        <tr>
+          <td>lua-cjson</td><td>39</td>
+        </tr>
+        <tr>
+          <td>LPeg</td><td>38</td>
+        </tr>
+        <tr>
+          <td>busted</td><td>25</td>
+        </tr>
+        <tr>
+          <td>LuaSec</td><td>23</td>
+        </tr>
+        <tr>
+          <td>LuaCrypto</td><td>17</td>
+        </tr>
+        <tr>
+          <td>luaposix</td><td>16</td>
+        </tr>
+        <tr>
+          <td>penlight</td><td>16</td>
+        </tr>
+        <tr>
+          <td>lusty</td><td>12</td>
+        </tr>
+        <tr>
+          <td>date</td><td>12</td>
+        </tr>
+        <tr>
+          <td>LuaBitOp</td><td>11</td>
+        </tr>
+        <tr>
+          <td>Copas</td><td>11</td>
+        </tr>
+        <tr>
+          <td>lapis</td><td>11</td>
+        </tr>
+        <tr>
+          <td>dromozoa-commons</td><td>11</td>
+        </tr>
+        <tr>
+          <td>luajson</td><td>11</td>
+        </tr>
+        <tr>
+          <td>bit32</td><td>11</td>
+        </tr>
+        <tr>
+          <td>dkjson</td><td>10</td>
+        </tr>
+        <tr>
+          <td>ansicolors</td><td>10</td>
+        </tr>
+        <tr>
+          <td>lbase64</td><td>9</td>
+        </tr>
+        <tr>
+          <td>lua-resty-http</td><td>9</td>
+        </tr>
+        <tr>
+          <td>lluv</td><td>9</td>
+        </tr>
+        <tr>
+          <td>luaossl</td><td>8</td>
+        </tr>
+        <tr>
+          <td>moonscript</td><td>8</td>
+        </tr>
+        <tr>
+          <td>LuaExpat</td><td>8</td>
+        </tr>
+        <tr>
+          <td>WSAPI</td><td>7</td>
+        </tr>
+        <tr>
+          <td>argparse</td><td>7</td>
+        </tr>
+        <tr>
+          <td>lualogging</td><td>7</td>
+        </tr>
+        <tr>
+          <td>MD5</td><td>7</td>
+        </tr>
+        <tr>
+          <td>mjolnir.fnutils</td><td>7</td>
+        </tr>
+        <tr>
+          <td>luv</td><td>7</td>
+        </tr>
+        <tr>
+          <td>hotswap</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lua-ev</td><td>6</td>
+        </tr>
+        <tr>
+          <td>stdlib</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lustache</td><td>6</td>
+        </tr>
+        <tr>
+          <td>yaml</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lua-TestMore</td><td>6</td>
+        </tr>
+        <tr>
+          <td>mjolnir.alert</td><td>6</td>
+        </tr>
+        <tr>
+          <td>mjolnir.application</td><td>6</td>
+        </tr>
+        <tr>
+          <td>Cosmo</td><td>5</td>
+        </tr>
+        <tr>
+          <td>Markdown</td><td>5</td>
+        </tr>
+        <tr>
+          <td>WSAPI-Xavante</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lua-MessagePack</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lub</td><td>5</td>
+        </tr>
+        <tr>
+          <td>Xavante</td><td>5</td>
+        </tr>
+        <tr>
+          <td>mimetypes</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lua-path</td><td>5</td>
+        </tr>
+        <tr>
+          <td>inspect</td><td>5</td>
+        </tr>
+        <tr>
+          <td>LOOP</td><td>4</td>
+        </tr>
+        <tr>
+          <td>cqueues</td><td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="js/svg-pan-zoom.min.js"></script>
+<script>
+document.getElementById("dep-graph").addEventListener('load', function() {
+  svgPanZoom(document.getElementById("dep-graph"));
+})
+</script>

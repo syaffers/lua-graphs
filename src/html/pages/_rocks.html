@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="the-graph"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="info">
+      <h1>
+        Bubble Plot of All LuaRocks
+      </h1>
+      <p><strong>Nodes/Bubbles:</strong></p>
+      <p>Nodes/bubbles represent aa LuaRock and the size is relative to the
+        amount of total downloads of the rock. Hovering over the bubbles show
+        the value of downloads and the uploader made by the uploader. The color
+        of the bubbles are grouped by uploader but since there are only so many
+        colors (20 specifically), some colors represent 1 or more uploaders.
+      </p>
+        Data from
+        <a href="http://www.luarocks.org">luarocks.org</a>.
+      </p>
+    </div>
+  </div>
+</div>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/bubble-rocks.js"></script>

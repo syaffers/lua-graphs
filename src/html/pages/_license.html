@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="the-graph"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="info">
+      <h1>
+        Graph of the Top 50 Most Depended-on Lua Libraries
+        <small>and its dependencies</small>
+      </h1>
+      <p><strong>Nodes and Edges (Ovals and Arrows):</strong></p>
+      <p>Nodes represent a package and a directed edge (arrow) points to the
+        package on which it depends. Green and light yellow nodes are
+        packages belonging to the &quot;Top 50&quot; list, bright yellow
+        nodes are packages not in the &quot;Top 50&quot; but are
+        dependencies of packages in the &quot;Top 50&quot;.
+      </p>
+      <p>Initially, I collected 1122 packages (in July 2016) which is
+        just too big to visualize efficiently (but not impossible, I could
+        safely generate a graph of Top 500 nodes but displaying it becomes
+        a problem). To wrap your head around the figures: the table below
+        shows the number of dependents which is number of arrows pointing to
+        that particular node. The &quot;Top 50&quot; is much more feasible
+        to display and shows enough information dependency strategies when
+        developing packages for Lua. The values below are based on the
+        listed dependencies on
+        <a href="http://www.luarocks.org">luarocks.org</a>.
+      </p>
+      <p><strong>Top Dependencies (in desc. order):</strong></p>
+    </div>
+  </div>
+</div>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/bubble-lics.js"></script>

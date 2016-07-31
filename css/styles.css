@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abril Fatface";
+}
+
+p, ul, li, a, table, th, tr, footer {
+  font-family: "Average Sans";
+}
+
+text {
+  font-family: monospace;
+}
+
+#the-graph, #dep-graph {
+  -webkit-box-shadow: 0 0 1px;
+  -moz-box-shadow: 0 0 1px;
+  box-shadow: 0 0 1px;
+}

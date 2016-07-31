@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="the-graph"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="info">
+      <h1>
+        Bubble Plot of Downloaded Rocks Count by Uploader
+      </h1>
+      <p><strong>Nodes/Bubbles:</strong></p>
+      <p>Nodes/bubbles represent an uploader and the size is relative to the
+        amount of cumulative downloads of all rocks owned by that particular
+        uploader. Hovering over the bubbles show the value of total downloads.
+        The color of the bubbles are random and does not imply grouping.
+      </p>
+        Data from
+        <a href="http://www.luarocks.org">luarocks.org</a>.
+      </p>
+    </div>
+  </div>
+</div>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="js/bubble-dns.js"></script>

@@ -1,0 +1,28 @@
+#! /usr/bin/env node
+"use strict";
+
+const cheerio = require('cheerio');
+const fs = require('fs');
+
+let pages_dir = "src/html/pages/";
+let template_src = "src/html/layout/_template.html";
+
+let template = fs.readFileSync(template_src);
+let pages = fs.readdirSync(pages_dir);
+
+pages.forEach(function (page) {
+  let $ = cheerio.load(template);
+  let page_html = fs.readFileSync(pages_dir + page);
+  let active_link = 'a[href="' + page.slice(1) + '"]';
+
+  $(active_link).each(function (i) {
+    if(this.attribs['class']) {
+      this.parent.attribs['class'] += " active";
+    } else {
+      this.parent.attribs['class'] = "active";
+    }
+  });
+
+  $("#page-content").append(String(page_html));
+  fs.writeFileSync(page.slice(1), $.html());
+});

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Collection of Graphical Visualization of LuaRocks Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Abril Fatface&amp;subset=latin" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Average Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header active">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Lua-Graphs</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Top 50 <span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bubble Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="rocks.html">All Rocks Data</a></li>
+                <li><a href="downloads.html">Uploader Download Counts</a></li>
+                <li><a href="uploads.html">Uploader Upload Counts</a></li>
+                <li><a href="license.html">License Counts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="page-content"><div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <object type="image/svg+xml" data="img/dep-graph.svg" id="dep-graph">
+        Your browser does not support SVG
+      </object>
+    </div>
+  </div>
+
+  <div class="col-xs-12" id="info">
+    <h1>
+      Graph of the Top 50 Most Depended-on Lua Libraries<br>
+      <small>and its dependencies</small>
+    </h1>
+    <p><strong>Nodes and Edges (Ovals and Arrows):</strong></p>
+    <p>Nodes represent a package and a directed edge (arrow) points to the
+       package on which it depends. Green and light yellow nodes are
+       packages belonging to the &quot;Top 50&quot; list, bright yellow
+       nodes are packages not in the &quot;Top 50&quot; but are
+       dependencies of packages in the &quot;Top 50&quot;.
+    </p>
+    <p>Initially, I collected 1122 packages (in July 2016) which is
+      just too big to visualize efficiently (but not impossible, I could
+      safely generate a graph of Top 500 nodes but displaying it becomes
+      a problem). To wrap your head around the figures: the table below
+      shows the number of dependents which is number of arrows pointing to
+      that particular node. The &quot;Top 50&quot; is much more feasible
+      to display and shows enough information dependency strategies when
+      developing packages for Lua. The values below are based on the
+      listed dependencies on
+      <a href="http://www.luarocks.org">luarocks.org</a>.
+    </p>
+    <p><strong>Top Dependencies (in desc. order):</strong></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Package Name</th>
+          <th># Dependents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LuaSocket</td><td>95</td>
+        </tr>
+        <tr>
+          <td>LuaFileSystem</td><td>55</td>
+        </tr>
+        <tr>
+          <td>lua-cjson</td><td>39</td>
+        </tr>
+        <tr>
+          <td>LPeg</td><td>38</td>
+        </tr>
+        <tr>
+          <td>busted</td><td>25</td>
+        </tr>
+        <tr>
+          <td>LuaSec</td><td>23</td>
+        </tr>
+        <tr>
+          <td>LuaCrypto</td><td>17</td>
+        </tr>
+        <tr>
+          <td>luaposix</td><td>16</td>
+        </tr>
+        <tr>
+          <td>penlight</td><td>16</td>
+        </tr>
+        <tr>
+          <td>lusty</td><td>12</td>
+        </tr>
+        <tr>
+          <td>date</td><td>12</td>
+        </tr>
+        <tr>
+          <td>LuaBitOp</td><td>11</td>
+        </tr>
+        <tr>
+          <td>Copas</td><td>11</td>
+        </tr>
+        <tr>
+          <td>lapis</td><td>11</td>
+        </tr>
+        <tr>
+          <td>dromozoa-commons</td><td>11</td>
+        </tr>
+        <tr>
+          <td>luajson</td><td>11</td>
+        </tr>
+        <tr>
+          <td>bit32</td><td>11</td>
+        </tr>
+        <tr>
+          <td>dkjson</td><td>10</td>
+        </tr>
+        <tr>
+          <td>ansicolors</td><td>10</td>
+        </tr>
+        <tr>
+          <td>lbase64</td><td>9</td>
+        </tr>
+        <tr>
+          <td>lua-resty-http</td><td>9</td>
+        </tr>
+        <tr>
+          <td>lluv</td><td>9</td>
+        </tr>
+        <tr>
+          <td>luaossl</td><td>8</td>
+        </tr>
+        <tr>
+          <td>moonscript</td><td>8</td>
+        </tr>
+        <tr>
+          <td>LuaExpat</td><td>8</td>
+        </tr>
+        <tr>
+          <td>WSAPI</td><td>7</td>
+        </tr>
+        <tr>
+          <td>argparse</td><td>7</td>
+        </tr>
+        <tr>
+          <td>lualogging</td><td>7</td>
+        </tr>
+        <tr>
+          <td>MD5</td><td>7</td>
+        </tr>
+        <tr>
+          <td>mjolnir.fnutils</td><td>7</td>
+        </tr>
+        <tr>
+          <td>luv</td><td>7</td>
+        </tr>
+        <tr>
+          <td>hotswap</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lua-ev</td><td>6</td>
+        </tr>
+        <tr>
+          <td>stdlib</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lustache</td><td>6</td>
+        </tr>
+        <tr>
+          <td>yaml</td><td>6</td>
+        </tr>
+        <tr>
+          <td>lua-TestMore</td><td>6</td>
+        </tr>
+        <tr>
+          <td>mjolnir.alert</td><td>6</td>
+        </tr>
+        <tr>
+          <td>mjolnir.application</td><td>6</td>
+        </tr>
+        <tr>
+          <td>Cosmo</td><td>5</td>
+        </tr>
+        <tr>
+          <td>Markdown</td><td>5</td>
+        </tr>
+        <tr>
+          <td>WSAPI-Xavante</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lua-MessagePack</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lub</td><td>5</td>
+        </tr>
+        <tr>
+          <td>Xavante</td><td>5</td>
+        </tr>
+        <tr>
+          <td>mimetypes</td><td>5</td>
+        </tr>
+        <tr>
+          <td>lua-path</td><td>5</td>
+        </tr>
+        <tr>
+          <td>inspect</td><td>5</td>
+        </tr>
+        <tr>
+          <td>LOOP</td><td>4</td>
+        </tr>
+        <tr>
+          <td>cqueues</td><td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="js/svg-pan-zoom.min.js"></script>
+<script>
+document.getElementById("dep-graph").addEventListener('load', function() {
+  svgPanZoom(document.getElementById("dep-graph"));
+})
+</script>
+</div>
+
+    <footer class="container">
+      <div class="row">
+        <div class="col-xs-12 text-right">
+          &#xA9; 2016, <a href="http://twitter.com/syaffers/">Syafiq Kamarul Azman</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
