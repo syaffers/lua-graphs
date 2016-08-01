@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="the-graph" style="max-width: 1140px; height: 490px; margin: auto;"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="info">
+      <h1>
+        Dependency Network of "Needy" LuaRocks
+      </h1>
+      <p><strong>Nodes and Edges:</strong></p>
+      <p>This is a plot of all 1122 packages in the root manifest of LuaRocks.
+        Nodes represent a LuaRock and the size is relative to the amount of
+        outdegrees or edges exiting the node. A larger node means a more "needy"
+        LuaRock in the sense that it requires more packages (i.e. has more
+        dependencies). Hovering over the bubbles show the name of the LuaRock
+        and the number of dependencies. The color of the bubbles are grouped by
+        outdegree value, larger values are blue, values in the middle are yellow
+        and smaller values are red.
+      </p>
+      <p>
+        Data from
+        <a href="http://www.luarocks.org">luarocks.org</a>. Layout rendered
+        using <a href="https://gephi.org">Gephi</a> by first generating a random
+        layout before using Fruchterman-Rheingold and finally Force Atlas 2
+        generating this really cool human-head horizontal MRI-esque graph.
+        Rendering done by <a href="http://sigmajs.org">Sigma.js</a>. Scroll your
+        mouse over the graphs to zoom in.
+      </p>
+      <p>
+        Cool things to notice:
+        <ul>
+          <li><code>dromozoa</code> island,</li>
+          <li><code>mjolnir</code> islands, big one and small one and</li>
+          <li>"Lua Rock", the main island of this whole thing</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
+<script src="js/sigma.min.js"></script>
+<script src="js/sigma.parsers.gexf.min.js"></script>
+<script src="js/needy.js"></script>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="the-graph" style="max-width: 1140px; height: 490px; margin: auto;"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="info">
+      <h1>
+        Dependency Network of The Most Depended-on LuaRocks
+      </h1>
+      <p><strong>Nodes and Edges:</strong></p>
+      <p>This is a plot of all 1122 packages in the root manifest of LuaRocks.
+        Nodes represent a LuaRock and the size is relative to the amount of
+        indegrees or edges entering the node. A larger node means a more
+        depended-on LuaRock in the sense that it supports more packages (i.e.
+        has more dependents). Hovering over the bubbles show the name of the
+        LuaRock. The color of the bubbles are grouped by outdegree value, larger
+        values are blue, values in the middle are yellow and smaller values are
+        red.
+      </p>
+      <p>
+        Data from
+        <a href="http://www.luarocks.org">luarocks.org</a>. Layout rendered
+        using <a href="https://gephi.org">Gephi</a> by first generating a random
+        layout before using Fruchterman-Rheingold and finally Force Atlas 2.
+        Rendering done by <a href="http://sigmajs.org">Sigma.js</a>. Scroll your
+        mouse over the graphs to zoom in.
+      </p>
+      <p>
+        Cool things to notice:
+        <ul>
+          <li><code>mjolnir</code> atoll, bottom right-hand area</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
+<script src="js/sigma.min.js"></script>
+<script src="js/sigma.parsers.gexf.min.js"></script>
+<script src="js/required.js"></script>

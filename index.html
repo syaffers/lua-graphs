@@ -28,6 +28,13 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.html">Top 50 <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dependency Networks <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="needy.html">Needy LuaRocks</a></li>
+                <li><a href="required.html">Most Required LuaRocks</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bubble Plots <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="rocks.html">All Rocks Data</a></li>
@@ -62,19 +69,21 @@
        nodes are packages not in the &quot;Top 50&quot; but are
        dependencies of packages in the &quot;Top 50&quot;.
     </p>
-    <p>Initially, I collected 1122 packages (in July 2016) which is
-      just too big to visualize efficiently (but not impossible, I could
-      safely generate a graph of Top 500 nodes but displaying it becomes
-      a problem). To wrap your head around the figures: the table below
-      shows the number of dependents which is number of arrows pointing to
-      that particular node. The &quot;Top 50&quot; is much more feasible
-      to display and shows enough information dependency strategies when
-      developing packages for Lua. The values below are based on the
-      listed dependencies on
+    <p>Initially, I collected 1122 packages (in July 2016)
+      <del class="strikethrough"> which is just too big to visualize efficiently
+      but not impossible, I could safely generate a graph of Top 500 nodes 
+      but displaying it becomes a problem</del> (see &quot;Dependency Networks&quot;). To
+      wrap your head around the figures: the table below shows the number of
+      dependents which is number of arrows pointing to that particular node.
+      The &quot;Top 50&quot; is much more feasible to display and shows enough
+      information dependency strategies when developing packages for Lua. The
+      values below are based on the listed dependencies on
       <a href="http://www.luarocks.org">luarocks.org</a>.
     </p>
     <p>
-      Scroll your mouse over the graphs to zoom in.
+      Graph generated using <a href="https://networkx.github.io/">networkx</a>
+      and <a href="http://www.graphviz.org">Graphviz</a>. Scroll your mouse over
+      the graphs to zoom in.
     </p>
     <p><strong>Top Dependencies (in desc. order):</strong></p>
     <table class="table table-striped">
